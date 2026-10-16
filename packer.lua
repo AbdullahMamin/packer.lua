@@ -19,15 +19,15 @@ local function ReadRawFile(filepath)
     return str
 end
 
-if #arg ~= 3 or (arg[1] ~= "pack" and arg[1] ~= "unpack") then
+if #arg ~= 2 then
     print("Copyright (C) 2026 Abdullah M.Amin Abdullah - Licensed under the MIT license <https://mit-license.org/>")
     print("packer.lua usage:")
     print("- lua packer.lua <in_directory> <out_file>")
 end
 
 local filelist = {}
-local in_dir = arg[2]
-local out_file = arg[3]
+local in_dir = arg[1]
+local out_file = arg[2]
 if in_dir:sub(#in_dir, #in_dir) ~= '/' then
     in_dir = in_dir .. '/'
 end
